@@ -1,9 +1,4 @@
 ## make_tables.R -- summary tables for the timing study.
-## Computes every statistic from the raw per-task files results/<METHOD>/rows/*.rds,
-## cross-checks them against results/summary/{all_rows.csv, summary_by_config.csv, REPORT.md},
-## and writes output/*.csv, output/*.tex and output/checks.txt. Read-only on results/.
-## Any failed check stops the script before tables are written.
-
 tc_script_dir <- function() {
   f <- sub("^--file=", "", grep("^--file=", commandArgs(trailingOnly = FALSE), value = TRUE))
   if (length(f)) dirname(normalizePath(f[1])) else normalizePath(getwd())
