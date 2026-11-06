@@ -1,6 +1,4 @@
-# Counterpart of code/simu/simu-over/250410_TCV_over.R.
-# Same factor/loadings/intercepts, baseline formulas and AM/CJMLE estimators.
-# Changes: all counts NB(size=NB_SIZE); known/estimated-size NB thinning; original +1e-20 CV loss.
+
 source("nb_settings.R")   # run from this folder
 source(file.path(work_dir,"250113function_tcv.R"))
 
