@@ -1,22 +1,5 @@
 ################################################################################
 ## 02_descriptive_h.R
-## All numbers used in the reply to Reviewer #3, comment (h), on the real data.
-## Input : data/peerj32_counts_44x130.rds   (made by 01_peerj32_matrix.R)
-## Model : GFM::gfm(types = "poisson", q = 3, algorithm = "AM", maxIter = 30),
-##         the three-factor fit of the paper
-## Output: output/descriptive_h.txt, output/table_descriptive.tex,
-##         output/fig_mean_variance.pdf, output/fig_mean_variance.png
-## Sections
-##   1 descriptive statistics: taxon means and variances, variance/mean, zeros, library sizes
-##   2 where the zeros are (by taxon mean)
-##   3 dispersion given the fitted intensities: taxon-wise negative binomial size,
-##     profile likelihood with the intensities held fixed (descriptive only)
-##   4 fit of the mean structure: proportion of Poisson deviance explained,
-##     sum of squares, correlation of observed and fitted means
-##   5 marginal variance implied by the fitted model (law of total variance):
-##     Var(X_ij) = E(lambda_ij) + Var(lambda_ij), estimated by mean_i and var_i of the
-##     fitted intensities, compared with the observed taxon variances
-##   6 mean-variance figure
 ################################################################################
 BASE <- "/Users/chengjunwang/Desktop/我的科研/TCV/csda/revision1/code/real-r1"; OUT <- file.path(BASE, "output")
 dir.create(OUT, showWarnings = FALSE)
