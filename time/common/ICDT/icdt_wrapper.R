@@ -1,26 +1,4 @@
 ################################################################################
-## icdt_wrapper.R
-## Thin wrapper around the authors' ICDT code
-##   Wang, Xu, Zhao & Wang (2025, JASA), "Data thinning for Poisson factor
-##   models and its applications".  Upstream: https://github.com/Wangzhijingwzj/ICDT
-##
-## The authors' computational code is retained; only the sourceCpp path is adapted.
-## This file only
-##   (1) loads the packages that the upstream real-data script real_bbc.R loads,
-##   (2) sources functions.R from common/ICDT under the runner's ROOT
-##       (its sourceCpp path points to common/ICDT/bgfm.cpp),
-##   (3) defines run_icdt(), which calls the upstream fac_ic() on one count
-##       matrix and turns its criterion values into selected factor numbers
-##       exactly as the upstream scripts do:
-##         ICDT    = which.min(ICDT_val)          (ICDT.R line 144, real_bbc.R line 46)
-##         IC4/IC5 = which.min(IC4_val / IC5_val) (ICDT.R lines 142-143)
-##         VSDT    = floor(getModeAverage(which.min of each thinning))
-##                                                (ICDT.R line 166, column "fis_B10")
-##
-## Usage
-##   ROOT <- path.expand("~/multiDT/TCV-ICDT"); source(file.path(ROOT, "common/ICDT/icdt_wrapper.R"))
-##   res <- run_icdt(x, qmax = 8, reptimes = 10, maxit = 30)
-##   res$ICDT; res$VSDT; res$VSDT_each; res$IC4; res$IC5; res$time_sec
 ################################################################################
 
 .icdt_need <- function(path, what) {
