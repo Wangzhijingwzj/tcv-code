@@ -1,10 +1,4 @@
-# Counterpart of ../icdt-over/run_icdt_over.R. Newly evaluate the NB matrices;
-# no historical Poisson/contamination results are reused as NB results.
-# nb-r1 (2026-10-31): optional PSOCK workers (WORKERS > 1 in nb_settings.R), one replicate per
-# task via parLapplyLB. The per-replicate computation (icdt_one) is unchanged.
-# nb-r1 (2026-11-01): x is regenerated from the data seed by generate_nb_data(n,p,s), the same
-# call the main stage uses (as in ../icdt-over/run_icdt_over.R), so this stage does not wait
-# for the main checkpoints.
+
 source("nb_settings.R")   # run from this folder
 source(file.path(work_dir,"250113function_tcv.R"))   # generate_nb_data()
 wrapper <- normalizePath(file.path(work_dir,"../../ICDT/icdt_wrapper.R"),mustWork=TRUE)
