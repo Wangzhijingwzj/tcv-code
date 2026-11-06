@@ -1,5 +1,4 @@
-# Summary under the original example's -log(dpois()+1e-20) validation loss.
-# Older checkpoints are rescored from stored fold losses, without refitting.
+
 source("nb_settings.R")   # run from this folder
 
 summarize_nb <- function() {
