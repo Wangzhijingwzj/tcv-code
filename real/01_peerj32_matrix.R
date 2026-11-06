@@ -1,9 +1,4 @@
 ################################################################################
-## 01_peerj32_matrix.R
-## Reproduces, without touching V2real.R, the integer matrix that V2real.R
-## (lines 18-19) builds from the microbiome package and uses for every
-## real-data result in the paper. Saves it, the companion HITChip signal table
-## and the sample metadata under real-r1/data/.
 ## Run:  Rscript 01_peerj32_matrix.R
 ################################################################################
 BASE <- "/Users/chengjunwang/Desktop/我的科研/TCV/csda/revision1/code/real-r1"
